@@ -1,10 +1,10 @@
 {
   "mappings": [
-    "/content/ashleytestsiteV2/:/",
-    "/content/ashleytestsiteV2/configuration:/.helix/config.json",
-    "/content/ashleytestsiteV2/metadata:/metadata.json"
+    "/content/aem-sevoi-repo/:/",
+    "/content/aem-sevoi-repo/configuration:/.helix/config.json",
+    "/content/aem-sevoi-repo/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/ashleytestsiteV2/"
+    "/content/aem-sevoi-repo/"
   ]
 }
