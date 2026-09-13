@@ -485,3 +485,7 @@ header nav .nav-tools .lang-switcher { display: inline-flex; }
   }
 
 }
+/* Sevoi header logo on charcoal bar */
+header .nav-brand img {
+  filter: brightness(0) invert(1);
+}
