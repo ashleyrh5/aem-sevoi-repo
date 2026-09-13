@@ -9,19 +9,25 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..700&display=swap');
 :root {
+  /* Sevoi brand */
+  --brand-plum: #66173a;
+  --brand-charcoal: #303940;
+  --brand-blue: #0044bd;
+  --brand-cta: #66173a;
+
   /* colors */
   --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --light-color: #f6f2ee;
+  --dark-color: #303940;
+  --text-color: #303940;
+  --link-color: #66173a;
+  --link-hover-color: #4a1029;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: 'Open Sans', 'Helvetica Neue', arial, sans-serif;
+  --heading-font-family: 'Open Sans', 'Helvetica Neue', arial, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -39,7 +45,6 @@
   /* nav height */
   --nav-height: 64px;
 }
-
 /* fallback fonts */
 @font-face {
   font-family: roboto-condensed-fallback;
