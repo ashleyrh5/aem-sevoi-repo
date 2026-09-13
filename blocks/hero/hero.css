@@ -35,3 +35,17 @@
     padding: 40px 32px;
   }
 }
+/* Sevoi hero — restore spacing after light-heading change */
+.hero h1 {
+  line-height: 1.25;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.hero h1 sup {
+  vertical-align: baseline;
+  font-size: 0.5em;
+  font-style: italic;
+  display: inline-block;
+  margin-top: 12px;
+}
