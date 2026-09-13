@@ -39,3 +39,11 @@ footer .footer a:hover {
     padding: 50px 32px;
   }
 }
+/* Sevoi footer reskin */
+footer {
+  background-color: var(--dark-color);
+}
+
+footer .footer img {
+  filter: brightness(0) invert(1);
+}
