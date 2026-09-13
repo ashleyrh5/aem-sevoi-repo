@@ -489,3 +489,11 @@ header nav .nav-tools .lang-switcher { display: inline-flex; }
 header .nav-brand img {
   filter: brightness(0) invert(1);
 }
+/* Sevoi refined nav — tracked & lighter */
+header nav .nav-sections ul > li { font-weight: 400; }
+header nav .nav-sections ul > li > a {
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
