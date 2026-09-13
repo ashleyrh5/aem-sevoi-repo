@@ -44,6 +44,12 @@
 
   /* nav height */
   --nav-height: 64px;
+      /* theme variables mapped to Sevoi brand */
+  --dark-color-opacity: #303940;
+  --nav-text-color: #ffffff;
+  --main-accent-color: #0044bd;
+  --light-font-family: var(--body-font-family);
+  --text-light: #ffffff;
 }
 /* fallback fonts */
 @font-face {
