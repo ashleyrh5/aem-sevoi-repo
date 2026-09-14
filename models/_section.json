@@ -46,12 +46,16 @@
         "text",
         "image",
         "button",
+        "action-button",
         "title",
         "hero",
+        "accordion",
         "cards",
+        "carousel",
         "columns",
         "contentfragment",
-        "fragment"
+        "fragment",
+        "teaser"
       ]
     }
   ]
