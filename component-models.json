@@ -142,6 +142,25 @@
     ]
   },
   {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "summary",
+        "value": "",
+        "label": "Summary"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -157,6 +176,79 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "autoplay",
+        "label": "Auto-slide",
+        "description": "Automatically advance to the next slide on a timer. Pauses on hover.",
+        "value": false
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "autoplayInterval",
+        "label": "Auto-slide Interval",
+        "description": "Time between slides when Auto-slide is on.",
+        "value": "5000",
+        "options": [
+          {
+            "name": "3 seconds",
+            "value": "3000"
+          },
+          {
+            "name": "5 seconds",
+            "value": "5000"
+          },
+          {
+            "name": "7 seconds",
+            "value": "7000"
+          },
+          {
+            "name": "10 seconds",
+            "value": "10000"
+          }
+        ],
+        "condition": {
+          "===": [
+            {
+              "var": "autoplay"
+            },
+            true
+          ]
+        }
+      },
+      {
+        "component": "select",
+        "name": "imageZoom",
+        "label": "Image Zoom Effect",
+        "valueType": "string",
+        "value": "",
+        "description": "Applies to all cards in this carousel.",
+        "options": [
+          {
+            "name": "None",
+            "value": ""
+          },
+          {
+            "name": "Zoom In Effect",
+            "value": "zoom-in"
+          },
+          {
+            "name": "Zoom Out Effect",
+            "value": "zoom-out"
+          },
+          {
+            "name": "Swipe",
+            "value": "big-zoom"
+          }
+        ]
       }
     ]
   },
@@ -337,6 +429,179 @@
         "name": "excludeAssetPaths",
         "label": "Excluded Asset Paths",
         "description": "Comma- or newline-separated DAM paths to exclude from asset search results. Any asset whose path starts with one of these prefixes is dropped. Example: /content/dam/my-site/internal, /content/dam/my-site/drafts"
+      }
+    ]
+  },
+  {
+    "id": "teaser",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "value": "Your text will show here.",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "teaserStyle",
+        "value": "image",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Video",
+            "value": "video"
+          },
+          {
+            "name": "Image",
+            "value": "image"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "teaserStyle",
+        "value": "image",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Video",
+            "value": "video"
+          },
+          {
+            "name": "Image",
+            "value": "image"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Video Properties",
+        "name": "videoProperties",
+        "valueType": "string",
+        "condition": {
+          "===": [
+            {
+              "var": "teaserStyle"
+            },
+            "video"
+          ]
+        },
+        "fields": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "videoReference",
+            "label": "Video Reference",
+            "multi": false,
+            "description": "Provide a URL for the video background."
+          },
+          {
+            "component": "select",
+            "name": "videoBehavior",
+            "value": "autoplay",
+            "label": "Video Behavior (on load)",
+            "valueType": "string",
+            "options": [
+              {
+                "name": "Autoplay",
+                "value": "autoplay"
+              },
+              {
+                "name": "Pause",
+                "value": "pause"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Image Properties",
+        "name": "imageProperties",
+        "valueType": "string",
+        "condition": {
+          "===": [
+            {
+              "var": "teaserStyle"
+            },
+            "image"
+          ]
+        },
+        "fields": [
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "imageRef",
+            "label": "Image",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "alt",
+            "value": "Default alt",
+            "label": "Alt Text"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Button Properties",
+        "name": "buttonProperties",
+        "valueType": "string",
+        "fields": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "buttonText",
+            "value": "Button",
+            "label": "Button Text"
+          },
+          {
+            "component": "aem-content",
+            "name": "btn-link",
+            "label": "Button Link",
+            "valueType": "string",
+            "rootPath": "",
+            "description": "Path to linked AEM content"
+          },
+          {
+            "component": "select",
+            "name": "ctastyle",
+            "label": "CTA Style",
+            "valueType": "string",
+            "value": "button",
+            "options": [
+              {
+                "name": "Default Button",
+                "value": "default"
+              },
+              {
+                "name": "Primary Button",
+                "value": "button"
+              },
+              {
+                "name": "Secondary Button",
+                "value": "button-secondary"
+              },
+              {
+                "name": "Dark Button",
+                "value": "button-dark"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "boolean",
+        "label": "Enable Swoosh Effect",
+        "description": "Enable Circular effect on the component",
+        "name": "useSwoosh",
+        "value": "true",
+        "valueType": "boolean"
       }
     ]
   }
